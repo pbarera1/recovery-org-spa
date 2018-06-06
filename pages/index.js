@@ -1,1 +1,1 @@
-export default () => <div>Next JS!</div>;
+export default () => <div>Next JS!!!!!</div>;
