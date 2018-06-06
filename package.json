@@ -1,0 +1,29 @@
+{
+    "name": "recovery-org-spa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "next": "^6.0.3",
+        "react": "^16.4.0",
+        "react-dom": "^16.4.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "next",
+        "build": "next build",
+        "start": "next start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/referralsolutionsgroup/recovery-org-spa.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/referralsolutionsgroup/recovery-org-spa/issues"
+    },
+    "homepage": "https://github.com/referralsolutionsgroup/recovery-org-spa#readme"
+}
