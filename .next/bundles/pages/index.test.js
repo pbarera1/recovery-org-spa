@@ -1,1 +1,0 @@
-module.exports=__NEXT_REGISTER_PAGE("/index.test",function(){var t=webpackJsonp([2],{193:function(t,e,n){t.exports=n(194)},194:function(t,e){describe("runs test",function(){it("should run test",function(){expect("p").toEqual("p")})})}},[193]);return{page:t.default}});
