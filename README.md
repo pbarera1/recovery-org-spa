@@ -8,8 +8,9 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 -   Configure CodeBuild to read buildspec.yml and run commands
 -   Configure CodePipeline to integrate Github updates with CodeBuild
 
-## Deployment
+## Elastic Beanstalk Deployment
 
--   Push to Github
--   AWS CodeBuild reads buildspec.yml for pre-install/install commands
--   AWS CodePipeline deploy to Elastic Beanstalks
+1.  Create Elastic Beanstalk instance
+    -   Important: Use t2.small instance otherwise `npm install` will fail
+2.  Create CodeBuild
+3.  Configure CodePipeline
