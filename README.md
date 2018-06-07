@@ -2,7 +2,7 @@
 
 https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 
-# AWS Flow
+# AWS Deployment Workflow
 
 -   Configure Elastic Beanstalk to serve application
 -   Configure CodeBuild to read buildspec.yml and run commands
