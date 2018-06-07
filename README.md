@@ -14,4 +14,3 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
     -   Important: Use t2.small instance otherwise `npm install` will fail
 2.  Create CodeBuild
 3.  Configure CodePipeline
-0 test
