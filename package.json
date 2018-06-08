@@ -15,7 +15,7 @@
     "scripts": {
         "test": "NODE_ENV=testing jest",
         "coverage": "npm run test -- --coverage",
-        "dev": "node server.js",
+        "dev": "NODE_ENV=development node server.js",
         "build": "next build",
         "start": "NODE_ENV=production node server.js"
     },
