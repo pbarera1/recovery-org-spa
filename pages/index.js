@@ -7,7 +7,7 @@ export default () => (
             <a>About</a>
         </Link>
         <h1>Home</h1>
-        <Link prefetch href="4463">
+        <Link href="4463">
             <a>Post #1</a>
         </Link>
     </div>

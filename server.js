@@ -4,6 +4,7 @@ const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
+const PORT = process.env.PORT || 3000;
 
 app.prepare()
     .then(() => {
@@ -12,6 +13,7 @@ app.prepare()
         server.get('/:slug', (req, res) => {
             const page = '/post';
             const queryParams = {slug: req.params.slug};
+            console.log(page, req.params.slug);
             app.render(req, res, page, queryParams);
         });
 
@@ -19,9 +21,9 @@ app.prepare()
             return handle(req, res);
         });
 
-        server.listen(3000, err => {
+        server.listen(PORT, err => {
             if (err) throw err;
-            console.log('> Ready on http://localhost:3000');
+            console.log(`> Ready on http://localhost:${PORT}`);
         });
     })
     .catch(ex => {
