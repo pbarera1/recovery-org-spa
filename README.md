@@ -1,7 +1,7 @@
 ## URLs
 
-master branch: http://recovery-org-spa.us-west-2.elasticbeanstalk.com/
-dev branch: http://recovery-org-spa-dev.us-west-2.elasticbeanstalk.com/
+-   master branch - http://recovery-org-spa.us-west-2.elasticbeanstalk.com/
+-   dev branch - http://recovery-org-spa-dev.us-west-2.elasticbeanstalk.com/
 
 ## buildspec.yml docs
 
