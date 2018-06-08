@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import {Link} from './../routes.js';
 import App from './_app.js';
 
 export default () => (
     <div>
-        <Link href="/about">
+        <Link route="/about">
             <a>About</a>
         </Link>
         <h1>Home</h1>
-        <Link href="/4463">
+        <Link route="/4463">
             <a>Post #1</a>
         </Link>
     </div>

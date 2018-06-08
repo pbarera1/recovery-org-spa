@@ -3,7 +3,8 @@ import fetch from 'isomorphic-unfetch';
 
 export default class Post extends Component {
     static async getInitialProps(context) {
-        const slug = context.query.slug;
+        console.log(context);
+        const slug = context.query.postOrPage;
         const reqUrl = 'https://www.recovery.org/wp-json/wp/v2/posts/' + slug;
 
         let data = {};

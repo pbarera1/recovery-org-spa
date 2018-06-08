@@ -28,6 +28,7 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 ## WP + React Resources
 
 -   https://medium.com/@proposalpaul/next-js-3-0-headless-wordpress-in-production-a-deep-review-e9758d29c212
+-   https://trackchanges.postlight.com/introducing-postlights-wordpress-react-starter-kit-a61e2633c48c
 
 ## WP Plugins
 
