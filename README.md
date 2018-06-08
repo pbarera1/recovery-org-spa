@@ -24,3 +24,16 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 
 -   For the initial page load, getInitialProps will execute on the server only. getInitialProps will only be executed on the client when navigating to a different route via the Link component or using the routing APIs. https://github.com/zeit/next.js#fetching-data-and-component-lifecycle
 -   getInitialProps can not be used in children components. Only in pages
+
+## WP + React Resources
+
+-   https://medium.com/@proposalpaul/next-js-3-0-headless-wordpress-in-production-a-deep-review-e9758d29c212
+
+## WP Plugins
+
+-   Query API for pre-set content (without knowing post type)
+    -   https://github.com/elevati/wp-api-multiple-posttype
+-   Access advanced custom fields from API
+    -   https://wordpress.org/plugins/acf-to-rest-api/
+-   Add Yoast SEO to API
+    -   https://wordpress.org/plugins/wp-api-yoast-meta/

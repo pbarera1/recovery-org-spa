@@ -14,6 +14,3 @@ phases:
 artifacts:
   files:
     - .next/**/*
-    - package.json
-    - package-lock.json
-    - server.js

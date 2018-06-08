@@ -10,6 +10,11 @@ app.prepare()
     .then(() => {
         const server = express();
 
+        server.use((req, res, next) => {
+            res.setHeader('Content-Type', 'text/html');
+            next();
+        });
+
         server.get('/:slug', (req, res) => {
             const page = '/post';
             const queryParams = {slug: req.params.slug};
