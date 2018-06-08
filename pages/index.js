@@ -6,7 +6,7 @@ export default () => (
         <Link route="/about">
             <a>About</a>
         </Link>
-        <h1>Home</h1>
+        <h1>Homez</h1>
         <Link route="/4463">
             <a>Post #1</a>
         </Link>
