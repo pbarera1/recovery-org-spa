@@ -6,8 +6,14 @@ export default class Post extends Component {
         const slug = context.query.slug;
         const reqUrl = 'https://www.recovery.org/wp-json/wp/v2/posts/' + slug;
 
-        const res = await fetch(reqUrl);
-        const data = await res.json();
+        let data = {};
+
+        try {
+            const res = await fetch(reqUrl);
+            data = await res.json();
+        } catch (e) {
+            console.log(e);
+        }
 
         return {data};
     }
