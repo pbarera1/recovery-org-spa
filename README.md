@@ -19,3 +19,8 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
     -   Important: Use t2.small instance otherwise `npm install` will fail
 2.  Create CodeBuild
 3.  Configure CodePipeline
+
+## Routing
+
+-   For the initial page load, getInitialProps will execute on the server only. getInitialProps will only be executed on the client when navigating to a different route via the Link component or using the routing APIs. https://github.com/zeit/next.js#fetching-data-and-component-lifecycle
+-   getInitialProps can not be used in children components. Only in pages
