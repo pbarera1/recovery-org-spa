@@ -9,18 +9,18 @@ export default class Post extends Component {
         const res = await fetch(reqUrl);
         const data = await res.json();
 
-        console.log(Object.keys(data), `Show data fetched. Count`);
-
         return {data};
     }
 
     render() {
+        const html =
+            this.props.data &&
+            this.props.data.content &&
+            this.props.data.content.rendered;
         return (
             <div>
                 <h1>{this.props.url.query.slug}</h1>
-                <div
-                    dangerouslySetInnerHTML={{__html: this.props.data.content.rendered}}
-                />
+                <div dangerouslySetInnerHTML={{__html: html}} />
             </div>
         );
     }
