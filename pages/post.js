@@ -12,6 +12,8 @@ export default class Post extends Component {
 
         let data = {};
 
+        console.log(API_URL + slug);
+
         try {
             const response = await fetch(API_URL + slug);
             data = await response.json();
