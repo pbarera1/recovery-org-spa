@@ -1,6 +1,9 @@
 import App, {Container} from 'next/app';
 import React from 'react';
 
+/**
+ * Enable URL actions from child pages
+ */
 export default class MyApp extends App {
     static async getInitialProps({Component, ctx}) {
         let pageProps = {};

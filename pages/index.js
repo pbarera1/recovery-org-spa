@@ -1,14 +1,10 @@
-import {Link} from './../routes.js';
+import React from 'react';
+
+import env from '../lib/env';
 import App from './_app.js';
 
-export default () => (
-    <div>
-        <Link route="/about">
-            <a>About</a>
-        </Link>
-        <h1>Homez</h1>
-        <Link route="/4463">
-            <a>Post #1</a>
-        </Link>
-    </div>
-);
+export default class extends React.Component {
+    render() {
+        return <h1>Recovery.org</h1>;
+    }
+}

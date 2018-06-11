@@ -1,40 +1,31 @@
 import React, {Component} from 'react';
 import fetch from 'isomorphic-unfetch';
+import env from '../lib/env';
+
+const {API_URL} = env;
+
+import PostOrPage from '../components/PostOrPage';
 
 export default class Post extends Component {
     static async getInitialProps(context) {
-        console.log(context.query);
         const slug = context.query.postOrPage;
-
-        const baseUrl =
-            process.env.NODE_ENV === 'production'
-                ? process.env.API_URL_PROD
-                : process.env.API_URL_DEV;
-
-        const reqUrl = baseUrl + slug;
 
         let data = {};
 
         try {
-            const res = await fetch(reqUrl);
-            data = await res.json();
+            const response = await fetch(API_URL + slug);
+            data = await response.json();
         } catch (e) {
             console.log(e);
         }
 
-        return {data};
+        return {
+            data,
+            API_URL,
+            slug
+        };
     }
-
     render() {
-        const html =
-            this.props.data &&
-            this.props.data.content &&
-            this.props.data.content.rendered;
-        return (
-            <div>
-                <h1>{this.props.url.query.slug}</h1>
-                <div dangerouslySetInnerHTML={{__html: html}} />
-            </div>
-        );
+        return <PostOrPage {...this.props} />;
     }
 }
