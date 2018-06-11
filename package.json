@@ -21,7 +21,7 @@
         "dev": "NODE_ENV=development API_URL=http://local.recovery.org/wp-json/wp/v2/posts/ node server.js",
         "dev:api:prod": "API_URL=https://www.recovery.org/wp-json/wp/v2/posts/ node server.js",
         "build": "next build",
-        "start": "NODE_ENV=production node server.js"
+        "start": "NODE_ENV=production API_URL=https://www.recovery.org/wp-json/wp/v2/posts/ node server.js"
     },
     "repository": {
         "type": "git",

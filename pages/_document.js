@@ -1,4 +1,4 @@
-import Document_, {Head, Main} from 'next/document';
+import Document_, {Head, Main, NextScript} from 'next/document';
 import htmlescape from 'htmlescape';
 
 import Nav from '../components/Nav';
@@ -36,6 +36,7 @@ export default class Document extends Document_ {
                     <Layout>
                         <Nav />
                         <Main />
+                        <NextScript />
                     </Layout>
                     <script
                         dangerouslySetInnerHTML={{__html: '__ENV__ = ' + htmlescape(env)}}
