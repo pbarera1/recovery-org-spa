@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const next = require('next');
 const routes = require('./routes');
@@ -7,11 +9,14 @@ const app = next({dev});
 const handler = routes.getRequestHandler(app);
 const PORT = process.env.PORT || 3000;
 
+console.log(process.env.API_URL_DEV);
+
 app.prepare().then(() => {
     express()
         .use(handler)
         .listen(PORT);
 });
+
 // app.prepare()
 //     .then(() => {
 //         const server = express();
