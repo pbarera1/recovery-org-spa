@@ -3,18 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo Installing node modules...
       - npm install --production
-  pre_build:
-    commands:
-      - npm run test
   build:
     commands:
+      - echo Building application...
       - npm run build
+  post_build:
+    commands:
+      - npm run test
 
 artifacts:
   files:
-    - .next/**/*
-    - package.json
-    - package-lock.json
-    - server.js
-    - routes.js
+    - '**/*'
