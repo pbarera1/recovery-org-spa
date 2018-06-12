@@ -12,7 +12,7 @@ export default props => {
                 </a>
             </Link>
             <nav>
-                <Link href={'/post/4463'} as="/4463">
+                <Link href="/4463">
                     <a>Post #1</a>
                 </Link>
                 <Link href="/pro">
