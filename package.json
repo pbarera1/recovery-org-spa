@@ -17,10 +17,10 @@
     "scripts": {
         "test": "NODE_ENV=testing jest",
         "coverage": "npm run test -- --coverage",
-        "dev": "NODE_ENV=development API_URL=http://local.recovery.org/wp-json/wp/v2/posts/ node server.js",
-        "dev:api:prod": "NODE_ENV=development API_URL=https://www.recovery.org/wp-json/wp/v2/posts/ node server.js",
+        "dev": "NODE_ENV=development API_URL=http://local.recovery.org/wp-json/wp/v2 node server.js",
+        "dev:api:prod": "NODE_ENV=development API_URL=https://www.recovery.org/wp-json/wp/v2 node server.js",
         "build": "next build",
-        "start": "NODE_ENV=production API_URL=https://www.recovery.org/wp-json/wp/v2/posts/ node server.js"
+        "start": "NODE_ENV=production API_URL=https://www.recovery.org/wp-json/wp/v2 node server.js"
     },
     "repository": {
         "type": "git",

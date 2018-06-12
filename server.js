@@ -12,11 +12,32 @@ app.prepare()
     .then(() => {
         const server = express();
 
-        server.get('/:postOrPage', (req, res) => {
-            const actualPage = '/post';
-            const queryParams = {slug: req.params.postOrPage};
+        server.get('/robots.txt', (req, res) => {
+            res.send(`
+				User-agent: *
+				Disallow: /xmlrpc.php
+				Disallow: /forum/*
+				Disallow: /*?Sort=
 
-            console.log(req.params.postOrPage);
+				User-agent: MSNBot
+				Crawl-delay: 5
+
+				User-agent: bingbot
+				Crawl-delay: 5
+			`);
+        });
+
+        server.get('/topics/:articleSlug', (req, res) => {
+            const actualPage = '/article';
+            const queryParams = {slug: req.params.articleSlug};
+
+            app.render(req, res, actualPage, queryParams);
+        });
+
+        server.get('/:postOrPageSlug', (req, res) => {
+            const actualPage = '/post';
+            const queryParams = {slug: req.params.postOrPageSlug};
+
             app.render(req, res, actualPage, queryParams);
         });
 

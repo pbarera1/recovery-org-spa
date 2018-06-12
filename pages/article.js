@@ -13,13 +13,17 @@ export default class Post extends Component {
         const slug = context.query.slug;
 
         let data = {};
-        const url = `${API_URL}/post?slug=${slug}`;
+        const url = `${API_URL}/article?slug=${slug}`;
 
         console.log(url);
 
         try {
             const response = await fetch(url);
             data = await response.json();
+
+            if (data.length) {
+                data = data[0];
+            }
         } catch (e) {
             console.log(e);
         }

@@ -47,3 +47,19 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 # Express route matching
 
 -   https://expressjs.com/en/guide/routing.html
+
+# Notes
+
+-   Only showing these 10 results in search/slug
+    [ 'The Aftermath of Experiencing Tragedy',
+    'This Ohio VA Hospital Nearly Cut Its Opioid Prescriptions in Half',
+    'Utah Offers Free Naloxone Kits, Police Confiscate the Syringes?',
+    'What Women Want (From Addiction Treatment)',
+    '6 Tips to Stay Sober During the Winter Months',
+    'The Dating Mistakes I Made in Early Recovery',
+    'The Woman Who Mistook Her Therapist for a Houseplant',
+    'Sober and Pregnant: Here&#8217;s What I Plan to Teach My Little Girl',
+    'Jail vs Treatment: Law Enforcement Summit Seeks Solutions',
+    '5 Ways to Boost Your Self-Esteem After a Relapse' ]
+-   Article Custom Post Type
+    -   recovery.org/releases/2018_06_11_16_48_58/html/wp-content/plugins/articles-post-type/includes/add_custom_post_types.inc.php

@@ -12,7 +12,7 @@ export default props => {
                 </a>
             </Link>
             <nav>
-                <Link href="/4463">
+                <Link href="/quitting-kratom">
                     <a>Post #1</a>
                 </Link>
                 <Link href="/pro">
