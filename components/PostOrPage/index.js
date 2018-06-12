@@ -9,7 +9,7 @@ export default class PostOrPage extends Component {
 
         return (
             <div>
-                <h1>test</h1>
+                <h1>{this.props.title}</h1>
                 <div dangerouslySetInnerHTML={{__html: html}} />
             </div>
         );

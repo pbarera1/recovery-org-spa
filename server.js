@@ -1,16 +1,34 @@
 const express = require('express');
 const next = require('next');
-const routes = require('./routes');
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({dev});
-const handler = routes.getRequestHandler(app);
-const PORT = process.env.PORT || 3000;
-
-console.log('PORT', PORT, process.env.NODE_ENV);
-
-app.prepare().then(() => {
-    express()
-        .use(handler)
-        .listen(PORT);
+const app = next({
+    dev
 });
+const handle = app.getRequestHandler();
+
+app.prepare()
+    .then(() => {
+        const server = express();
+
+        server.get('/:postOrPage', (req, res) => {
+            const actualPage = '/post';
+            const queryParams = {slug: req.params.postOrPage};
+
+            console.log(req.params.postOrPage);
+            app.render(req, res, actualPage, queryParams);
+        });
+
+        server.get('*', (req, res) => {
+            return handle(req, res);
+        });
+
+        server.listen(3000, err => {
+            if (err) throw err;
+            console.log('> Ready on http://localhost:3000');
+        });
+    })
+    .catch(ex => {
+        console.error(ex.stack);
+        process.exit(1);
+    });

@@ -10,7 +10,6 @@
         "isomorphic-unfetch": "^2.0.0",
         "jest": "^23.1.0",
         "next": "^6.0.3",
-        "next-routes": "^1.4.2",
         "react": "^16.4.0",
         "react-dom": "^16.4.0"
     },

@@ -39,3 +39,7 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
     -   https://wordpress.org/plugins/acf-to-rest-api/
 -   Add Yoast SEO to API
     -   https://wordpress.org/plugins/wp-api-yoast-meta/
+
+# Next.JS Relevent Issue
+
+-   https://github.com/zeit/next.js/issues/3067

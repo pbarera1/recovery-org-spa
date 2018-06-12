@@ -1,10 +1,8 @@
-import Document_, {Head, Main, NextScript} from 'next/document';
+import Document_, {Head, Main} from 'next/document';
 import htmlescape from 'htmlescape';
 
-import Nav from '../components/Nav';
-import Layout from '../components/Layout';
-
 import {globalStyles} from '../lib/styles';
+
 const {API_URL} = process.env;
 const env = {API_URL};
 
@@ -12,7 +10,7 @@ export default class Document extends Document_ {
     static async getInitialProps(context) {
         const props = await Document_.getInitialProps(context);
 
-        return props;
+        return {...props};
     }
 
     render() {
@@ -22,7 +20,7 @@ export default class Document extends Document_ {
                     <title>
                         Addiction Recovery – Alcohol and Drug Abuse Treatment Resources
                     </title>
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1, minimal-ui"
@@ -33,11 +31,7 @@ export default class Document extends Document_ {
                     </style>
                 </Head>
                 <body>
-                    <Layout>
-                        <Nav />
-                        <Main />
-                        <NextScript />
-                    </Layout>
+                    <Main />
                     <script
                         dangerouslySetInnerHTML={{__html: '__ENV__ = ' + htmlescape(env)}}
                     />

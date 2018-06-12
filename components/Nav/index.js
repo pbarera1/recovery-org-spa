@@ -1,4 +1,4 @@
-import {Link} from '../../routes.js';
+import Link from 'next/link';
 import {HEADER_BG} from '../../lib/styles';
 
 import Logo from '../Logo';
@@ -6,22 +6,22 @@ import Logo from '../Logo';
 export default props => {
     return (
         <header>
-            <Link route="/">
+            <Link href="/">
                 <a>
                     <Logo />
                 </a>
             </Link>
             <nav>
-                <Link route="/4463">
+                <Link href={'/post/4463'} as="/4463">
                     <a>Post #1</a>
                 </Link>
-                <Link route="/pro">
+                <Link href="/pro">
                     <a>Pro Corner</a>
                 </Link>
-                <Link route="/forums">
+                <Link href="/forums">
                     <a>Forums</a>
                 </Link>
-                <Link route="/stories">
+                <Link href="/stories">
                     <a>Stories</a>
                 </Link>
             </nav>

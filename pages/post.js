@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import fetch from 'isomorphic-unfetch';
 import env from '../lib/env';
+import Layout from '../components/Layout';
+import {getProp} from '../lib/utils';
 
 const {API_URL} = env;
 
@@ -8,11 +10,9 @@ import PostOrPage from '../components/PostOrPage';
 
 export default class Post extends Component {
     static async getInitialProps(context) {
-        const slug = context.query.postOrPage;
+        const slug = context.query.slug;
 
         let data = {};
-
-        console.log(API_URL + slug);
 
         try {
             const response = await fetch(API_URL + slug);
@@ -22,12 +22,17 @@ export default class Post extends Component {
         }
 
         return {
+            title: getProp(data, 'title.rendered', ''),
             data,
             API_URL,
             slug
         };
     }
     render() {
-        return <PostOrPage {...this.props} />;
+        return (
+            <Layout>
+                <PostOrPage {...this.props} />
+            </Layout>
+        );
     }
 }
