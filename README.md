@@ -2,7 +2,6 @@
 
 -   Clone this repo
 -   Install plugins to local.recovery.org (see WP Plugins below)
-    -   wp-api-multiple-posttype
     -   acf-to-rest-api
 -   Configure post types to be fetchable through WP API (see Custom Post Type Fetching below)
 -   `npm run dev`
