@@ -1,39 +1,12 @@
 import React, {Component} from 'react';
-import fetch from 'isomorphic-unfetch';
-import env from '../lib/env';
 import Layout from '../components/Layout';
-import {getProp} from '../lib/utils';
-
-const {API_URL} = env;
+import withInitialProps from '../lib/withInitialProps';
 
 import PostOrPage from '../components/PostOrPage';
 
-export default class Post extends Component {
-    static async getInitialProps(context) {
-        const slug = context.query.slug;
-
-        let data = {};
-        const url = `${API_URL}/post?slug=${slug}`;
-
-        console.log(url);
-
-        try {
-            const response = await fetch(url);
-            data = await response.json();
-        } catch (e) {
-            console.log(e);
-        }
-
-        console.log(data);
-
-        return {
-            title: getProp(data, 'title.rendered', ''),
-            data,
-            API_URL,
-            slug
-        };
-    }
+class Post extends Component {
     render() {
+        console.log('POST');
         return (
             <Layout>
                 <PostOrPage {...this.props} />
@@ -41,3 +14,5 @@ export default class Post extends Component {
         );
     }
 }
+
+export default withInitialProps(Post, (api, slug) => `${api}/post?slug=${slug}`);

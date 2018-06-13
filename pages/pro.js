@@ -4,9 +4,9 @@ import withInitialProps from '../lib/withInitialProps';
 
 import PostOrPage from '../components/PostOrPage';
 
-class Article extends Component {
+class Pro extends Component {
     render() {
-        console.log('ARTICLE');
+        console.log('PRO');
         return (
             <Layout>
                 <PostOrPage {...this.props} />
@@ -15,4 +15,4 @@ class Article extends Component {
     }
 }
 
-export default withInitialProps(Article, (api, slug) => `${api}/article?slug=${slug}`);
+export default withInitialProps(Pro, (api, slug) => `${api}/pro?slug=${slug}`);

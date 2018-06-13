@@ -8,13 +8,10 @@ export default props => {
         <header>
             <Link href="/">
                 <a>
-                    <Logo />
+                    <Logo style={{width: '175px', height: '100%'}} />
                 </a>
             </Link>
             <nav>
-                <Link href="/topics/quitting-kratom">
-                    <a>Post #1</a>
-                </Link>
                 <Link href="/pro">
                     <a>Pro Corner</a>
                 </Link>

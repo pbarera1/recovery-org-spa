@@ -26,6 +26,7 @@ export default class Document extends Document_ {
                         content="width=device-width, initial-scale=1, minimal-ui"
                     />
                     <meta name="format-detection" content="telephone=no" />
+                    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
                     <style jsx global>
                         {globalStyles}
                     </style>

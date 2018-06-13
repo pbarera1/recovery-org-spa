@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const path = require('path');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({
@@ -13,30 +14,50 @@ app.prepare()
         const server = express();
 
         server.get('/robots.txt', (req, res) => {
-            res.send(`
-				User-agent: *
-				Disallow: /xmlrpc.php
-				Disallow: /forum/*
-				Disallow: /*?Sort=
-
-				User-agent: MSNBot
-				Crawl-delay: 5
-
-				User-agent: bingbot
-				Crawl-delay: 5
-			`);
+            res.status(200).sendFile('robots.txt', {
+                root: path.join(__dirname, 'static'),
+                headers: {
+                    'Content-Type': 'text/plain;charset=UTF-8'
+                }
+            });
         });
 
-        server.get('/topics/:articleSlug', (req, res) => {
-            const actualPage = '/article';
-            const queryParams = {slug: req.params.articleSlug};
+        /**
+         * City/State post type
+         */
+        server.get('/browse/:slug', (req, res) => {
+            const actualPage = /-[a-zA-Z]{2}$/.test(req.params.slug) ? '/city' : '/state';
+            const queryParams = {slug: req.params.slug};
 
             app.render(req, res, actualPage, queryParams);
         });
 
-        server.get('/:postOrPageSlug', (req, res) => {
+        /**
+         * Pro Corner post type
+         */
+        server.get('/pro/articles/:slug', (req, res) => {
+            const actualPage = '/pro';
+            const queryParams = {slug: req.params.slug};
+
+            app.render(req, res, actualPage, queryParams);
+        });
+
+        /**
+         * Articles post type
+         */
+        server.get('/topics/:slug', (req, res) => {
+            const actualPage = '/article';
+            const queryParams = {slug: req.params.slug};
+
+            app.render(req, res, actualPage, queryParams);
+        });
+
+        /**
+         * Posts
+         */
+        server.get('/:slug', (req, res) => {
             const actualPage = '/post';
-            const queryParams = {slug: req.params.postOrPageSlug};
+            const queryParams = {slug: req.params.slug};
 
             app.render(req, res, actualPage, queryParams);
         });
