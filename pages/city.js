@@ -5,7 +5,7 @@ import withInitialProps from '../lib/withInitialProps';
 
 class City extends Component {
     formatAdvancedCustomFields = () => {
-        const acfObject = getProp(this.props.data, 'acf');
+        const acfObject = getProp(this.props.data, 'acf', {});
 
         return Object.keys(acfObject).reduce((acc, cur) => {
             let text = acfObject[cur];
