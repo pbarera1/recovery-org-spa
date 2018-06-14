@@ -32,6 +32,7 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 -   https://medium.com/@proposalpaul/next-js-3-0-headless-wordpress-in-production-a-deep-review-e9758d29c212
 -   https://trackchanges.postlight.com/introducing-postlights-wordpress-react-starter-kit-a61e2633c48c
 -   https://nextjs.org/learn/
+-   https://infinum.co/the-capsized-eight/the-ups-and-downs-of-creating-a-decoupled-wordpress (WP REST Optimizations)
 
 ## WP Plugins
 
