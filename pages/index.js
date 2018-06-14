@@ -19,12 +19,12 @@ export default props => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/browse/arkansas">
+                    <Link href="/browse/district-of-columbia">
                         <a>state page</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/browse/little-rock-ar">
+                    <Link href="/browse/san-diego-ca">
                         <a>city page</a>
                     </Link>
                 </li>

@@ -93,3 +93,9 @@ function articles_custom_posts() {
     ));
 }
 ```
+
+## Needs
+
+Fix docker box so that we can pull updated WP installation for Recovery ( with cities and city custom fields)
+
+City Content - first fetch WP to see if we have post type for city, then get tokenized content in yml files
