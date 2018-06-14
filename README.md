@@ -6,6 +6,13 @@
 -   Configure post types to be fetchable through WP API (see Custom Post Type Fetching below)
 -   `npm run dev`
 
+## Big Picture
+
+-   Wordpress install will live in the `recovery-org` repository
+-   Wordpress application will live in `recovery-org-spa` repository
+-   subdomain of "portal.recovery.org" will resolve to the server that the WP install lives
+-   redirect "recovery.org/wp-admin" to "portal.recovery.org"
+
 ## URLs
 
 -   master branch - http://recovery-org-spa.us-west-2.elasticbeanstalk.com/
