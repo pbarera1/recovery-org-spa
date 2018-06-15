@@ -18,9 +18,30 @@
 -   master branch - http://recovery-org-spa.us-west-2.elasticbeanstalk.com/
 -   dev branch - http://recovery-org-spa-dev.us-west-2.elasticbeanstalk.com/
 
-## buildspec.yml docs
+## VSCode Settings
 
-https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+```json
+	"workbench.editor.showTabs": false,
+	"files.trimTrailingWhitespace": true,
+	"editor.dragAndDrop": true,
+	"editor.snippetSuggestions": "top",
+	"editor.formatOnSave": true,
+	"editor.fontFamily": "Operator Mono",
+	"editor.fontSize": 13,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"window.zoomLevel": 0,
+	"prettier.singleQuote": true,
+	"prettier.bracketSpacing": false,
+	"prettier.tabWidth": 4,
+	"prettier.jsxBracketSameLine": true,
+	"prettier.printWidth": 90,
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Atom One Dark",
+	"explorer.confirmDragAndDrop": false,
+	"java.errors.incompleteClasspath.severity": "ignore",
+	"material-icon-theme.showUpdateMessage": false,
+```
 
 ## AWS Deployment Workflow
 

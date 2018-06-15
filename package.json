@@ -17,6 +17,7 @@
     "scripts": {
         "test": "NODE_ENV=testing jest",
         "coverage": "npm run test -- --coverage",
+        "cache": "rm -rf node_modules/.cache",
         "dev": "NODE_ENV=development API_URL=http://local.recovery.org/wp-json/wp/v2 node server.js",
         "dev:api:prod": "NODE_ENV=development API_URL=https://www.recovery.org/wp-json/wp/v2 node server.js",
         "build": "next build",

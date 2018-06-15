@@ -4,6 +4,7 @@ import {getProp} from '../../lib/utils';
 
 export default class PostOrPage extends Component {
     render() {
+        console.log('DID I MOUNT?');
         const html = getProp(this.props, 'data.content.rendered', '');
 
         return (
