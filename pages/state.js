@@ -25,9 +25,9 @@ class State extends Component {
     };
 
     render() {
-        console.log('STATE');
         return (
             <Layout>
+                <h1>State</h1>
                 <div
                     dangerouslySetInnerHTML={{__html: this.formatAdvancedCustomFields()}}
                 />

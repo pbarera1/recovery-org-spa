@@ -6,9 +6,9 @@ import PostOrPage from '../components/PostOrPage';
 
 class Article extends Component {
     render() {
-        console.log('ARTICLE');
         return (
             <Layout>
+                <h1>Article</h1>
                 <PostOrPage {...this.props} />
             </Layout>
         );
