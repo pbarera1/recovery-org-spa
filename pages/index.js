@@ -3,11 +3,15 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 export default props => {
-    console.log('INDEX');
     return (
         <Layout>
             <h1>Recovery.org</h1>
             <ul style={{marginLeft: '30px'}}>
+                <li>
+                    <Link href="/sum-41-singer-admits-alcoholism-nearly-killed-him/">
+                        <a>post</a>
+                    </Link>
+                </li>
                 <li>
                     <Link href="/topics/quitting-kratom">
                         <a>article</a>

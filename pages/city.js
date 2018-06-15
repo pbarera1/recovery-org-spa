@@ -25,9 +25,9 @@ class City extends Component {
     };
 
     render() {
-        console.log('CITY');
         return (
             <Layout>
+                <h1>City</h1>
                 <div
                     dangerouslySetInnerHTML={{__html: this.formatAdvancedCustomFields()}}
                 />

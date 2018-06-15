@@ -32,7 +32,7 @@ fs.readFile(path.join(__dirname, 'crawl_result.txt'), (err, data) => {
 
     fs.writeFile(
         path.join(__dirname, OUTPUT_FILENAME),
-        JSON.stringify(map),
+        JSON.stringify(map, null, 2),
         'utf8',
         err => {
             if (err) throw err;
